@@ -46,6 +46,7 @@ Instructions:
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ prompt: fullPrompt, geometryType }),
+    credentials: "omit"
   });
 
   const data = await res.json();
