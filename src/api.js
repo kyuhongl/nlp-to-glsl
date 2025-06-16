@@ -40,7 +40,7 @@ Instructions:
 
   const fullPrompt = `${geometryGuidance}\n\n${prompt}`;
 
-  const res = await fetch("https://nlp-to-shader-backend.onrender.com/generate", {
+  const res = await fetch("https://nlp-to-glsl-backend.onrender.com/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
