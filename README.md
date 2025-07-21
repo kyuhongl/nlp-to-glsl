@@ -1,12 +1,30 @@
-# React + Vite
+# nlp-to-glsl
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**nlp-to-glsl** is a web app that converts natural language into live-rendered GLSL fragment shaders on 3D geometries like cubes, spheres, and planes. It uses a React + Three.js frontend and a FastAPI backend that proxies Claude API requests.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Type a prompt and generate a procedural GLSL shader
+- Render shaders in real-time on different 3D geometries
+- Geometry-aware system prompts for more accurate outputs
+- Per-face cube logic using `vFaceIndex` for stable rendering during rotation
+- Manual shader compilation with error handling
+- Few-shot prompting to improve Claude’s shader generation
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, Three.js, Monaco Editor
+- **Backend**: FastAPI, Claude API (via proxy)
+- **Deployment**: GitHub Pages (frontend), Render.com (backend)
+
+
+## Example Prompts
+
+- "A glowing plasma field"
+- "Dice cube with per-face dots"
+- "Minecraft dirt block"
+- "Earth-like procedural sphere"
+
+---
+
+Built by Kyuhong using Claude and GLSL.
